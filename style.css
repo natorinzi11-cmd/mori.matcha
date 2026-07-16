@@ -103,3 +103,116 @@ button:hover {
     width: 100%;
     max-width: 500px;
 }
+/* MENU SECTION */
+
+.menu {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+
+.menu h2,
+.story h2,
+.reviews h2 {
+    font-size: 42px;
+    color: #6c8d4d;
+    margin-bottom: 50px;
+}
+
+
+.menu-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.drink {
+    background: white;
+    padding: 35px;
+    width: 300px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+.drink-img {
+    font-size: 70px;
+}
+
+
+.drink h3 {
+    margin: 20px 0;
+}
+
+
+.drink p {
+    color: #777;
+}
+
+
+.drink b {
+    display: block;
+    margin-top: 20px;
+    color: #f39ab5;
+    font-size: 22px;
+}
+
+
+
+/* STORY */
+
+.story {
+    padding: 100px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.story div {
+    width: 50%;
+}
+
+
+.story p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.8;
+}
+
+
+.story-icon {
+    font-size: 150px;
+    text-align: center;
+}
+
+
+
+/* REVIEWS */
+
+.reviews {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+
+.review-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.review-box div {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    width: 300px;
+}
+
+
+.review-box p {
+    margin-top: 15px;
+    color: #666;
+}
