@@ -216,3 +216,43 @@ button:hover {
     margin-top: 15px;
     color: #666;
 }
+/* BOOKING */
+
+.booking{
+    padding:90px 8%;
+    text-align:center;
+    background:#f8f5ef;
+}
+
+.booking h2{
+    font-size:42px;
+    color:#6c8d4d;
+    margin-bottom:15px;
+}
+
+.booking p{
+    color:#666;
+    margin-bottom:40px;
+}
+
+.booking form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.booking input,
+.booking select{
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    font-size:16px;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.booking button{
+    margin-top:10px;
+}
