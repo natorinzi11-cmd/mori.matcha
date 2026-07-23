@@ -256,3 +256,42 @@ button:hover {
 .booking button{
     margin-top:10px;
 }
+/* FOOTER */
+
+footer{
+    background:#6c8d4d;
+    color:white;
+    text-align:center;
+    padding:60px 8%;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+.socials{
+    margin:25px 0;
+}
+
+.socials a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:#ffd7e3;
+}
+
+.copy{
+    margin-top:30px;
+    opacity:.8;
+    font-size:14px;
+}
