@@ -3,179 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mori Matcha</title>
-
+    <title>Mori Matcha — More than a drink, it's a moment.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-
-    <div class="logo">🍃 MORI MATCHA</div>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-
-</header>
-
-<section class="hero">
-
-    <div class="hero-left">
-
-        <p class="welcome">
-            WELCOME TO MORI MATCHA 🍃
-        </p>
-
-        <h1>
-            More than <br>
-            a drink. <br>
-            <span>It's a moment.</span>
-        </h1>
-
-        <p class="description">
-            Discover colorful matcha drinks, homemade desserts and a cozy atmosphere made for relaxing.
-        </p>
-
-        <button>Explore Menu →</button>
-
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-leaf">🍃</div>
+        <p>MORI MATCHA</p>
     </div>
 
-    <div class="hero-right">
+    <!-- Cart Overlay -->
+    <div id="cart-overlay"></div>
 
-        <div class="matcha-circle">
-            🍵
+    <!-- Cart Drawer -->
+    <aside id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Order 🍵</h3>
+            <button id="close-cart">✕</button>
         </div>
-
-    </div>
-
-</section>
-
-<section class="menu">
-
-    <h2>Our Matcha Menu</h2>
-
-    <div class="menu-box">
-
-        <div class="drink">
-            <div class="drink-img">🍵</div>
-            <h3>Matcha Latte</h3>
-            <p>Premium matcha with creamy milk.</p>
-            <b>$5.50</b>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <b id="cart-total-price">$0.00</b>
+            </div>
+            <button id="checkout-btn">Checkout →</button>
+            <p class="cart-note">Pickup in 15 min at Green Street 25</p>
         </div>
+    </aside>
 
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
 
-        <div class="drink">
-            <div class="drink-img">🍓</div>
-            <h3>Strawberry Matcha</h3>
-            <p>Fresh strawberry and sweet matcha.</p>
-            <b>$6.00</b>
+    <header id="header">
+        <div class="logo">🍃 MORI <span>MATCHA</span></div>
+        <nav id="nav">
+            <a href="#home" class="active">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#features">Why Us</a>
+            <a href="#booking">Booking</a>
+        </nav>
+        <div class="header-actions">
+            <button id="cart-btn" aria-label="Cart">
+                🛒 <span id="cart-count">0</span>
+            </button>
+            <button id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </header>
 
-
-        <div class="drink">
-            <div class="drink-img">🥥</div>
-            <h3>Coconut Matcha</h3>
-            <p>Refreshing tropical matcha drink.</p>
-            <b>$6.20</b>
-        </div>
-
-    </div>
-
-</section>  
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-left reveal">
+            <p class="welcome">WELCOME TO MORI MATCHA 🍃 — EST. 2022 TOKYO</p>
+            <h1>More than<br>a drink.<br><span>It's a moment.</span></h1>
+            <p class="description">
+                Discover colorful matcha drinks, homemade desserts and a cozy atmosphere made for relaxing. Hand-whisked, organic, from Uji, Kyoto.
             </p>
+            <div class="hero-btns">
+                <button class="primary-btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Explore Menu →</button>
+                <button class="secondary-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book a Table</button>
+            </div>
+            <div class="hero-stats">
+                <div><b>4.9</b><p>2.3k reviews</p></div>
+                <div><b>15k+</b><p>cups served</p></div>
+                <div><b>100%</b><p>organic</p></div>
+            </div>
+        </div>
+        <div class="hero-right reveal">
+            <div class="hero-img-wrap">
+                <img src="images/hero-matcha.png" alt="Matcha Latte" class="hero-img">
+                <div class="float-card float-1">🍓 Strawberry Matcha • Bestseller</div>
+                <div class="float-card float-2">⭐ 4.9/5 — Loved by locals</div>
+                <div class="hero-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+        <div class="section-head reveal">
+            <span class="eyebrow">OUR SIGNATURE</span>
+            <h2>Our Matcha Menu</h2>
+            <p>Crafted with ceremonial-grade Uji matcha, oat milk & house syrups</p>
         </div>
 
-    </div>
-
-</section>
-
-    <h2>Customer Reviews</h2>
-
-    <div class="review-box">
-
-        <div>
-            ⭐⭐⭐⭐⭐
-            <p>"The best matcha café! Cozy and delicious."</p>
+        <div class="menu-filters reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="classic">Classic</button>
+            <button class="filter-btn" data-filter="fruity">Fruity</button>
+            <button class="filter-btn" data-filter="seasonal">Seasonal</button>
         </div>
 
-
-        <div>
-            ⭐⭐⭐⭐⭐
-            <p>"Beautiful place and amazing drinks."</p>
+        <div class="menu-box">
+            <div class="drink reveal" data-category="classic" data-name="Matcha Latte" data-price="5.5">
+                <div class="drink-img-wrap"><img src="images/hero-matcha.png" alt="Matcha Latte"><span class="badge">Classic</span></div>
+                <h3>Matcha Latte</h3>
+                <p>Premium Uji matcha with creamy oat milk. Earthy & smooth.</p>
+                <div class="drink-bottom"><b>$5.50</b><button class="add-btn">+ Add</button></div>
+            </div>
+            <div class="drink reveal" data-category="fruity" data-name="Strawberry Matcha" data-price="6.0">
+                <div class="drink-img-wrap"><img src="images/strawberry-matcha.png" alt="Strawberry"><span class="badge pink">Bestseller</span></div>
+                <h3>Strawberry Matcha</h3>
+                <p>Fresh strawberry purée, sweet vanilla & ceremonial matcha.</p>
+                <div class="drink-bottom"><b>$6.00</b><button class="add-btn">+ Add</button></div>
+            </div>
+            <div class="drink reveal" data-category="seasonal" data-name="Coconut Matcha" data-price="6.2">
+                <div class="drink-img-wrap"><img src="images/coconut-matcha.png" alt="Coconut"><span class="badge green">Vegan</span></div>
+                <h3>Coconut Matcha</h3>
+                <p>Refreshing tropical twist with coconut milk & flakes.</p>
+                <div class="drink-bottom"><b>$6.20</b><button class="add-btn">+ Add</button></div>
+            </div>
+            <div class="drink reveal" data-category="fruity" data-name="Mango Yuzu Matcha" data-price="6.5">
+                <div class="drink-img-wrap"><div class="emoji-img">🥭</div><span class="badge">New</span></div>
+                <h3>Mango Yuzu Matcha</h3>
+                <p>Alphonso mango, Japanese yuzu citrus & iced matcha.</p>
+                <div class="drink-bottom"><b>$6.50</b><button class="add-btn">+ Add</button></div>
+            </div>
+            <div class="drink reveal" data-category="classic" data-name="Hojicha Latte" data-price="5.8">
+                <div class="drink-img-wrap"><div class="emoji-img">🍂</div><span class="badge">Roasted</span></div>
+                <h3>Hojicha Latte</h3>
+                <p>Roasted green tea, nutty caramel notes, oat milk.</p>
+                <div class="drink-bottom"><b>$5.80</b><button class="add-btn">+ Add</button></div>
+            </div>
+            <div class="drink reveal" data-category="seasonal" data-name="Sakura Matcha" data-price="6.8">
+                <div class="drink-img-wrap"><div class="emoji-img">🌸</div><span class="badge pink">Seasonal</span></div>
+                <h3>Sakura Matcha</h3>
+                <p>Cherry blossom syrup, white chocolate & spring matcha.</p>
+                <div class="drink-bottom"><b>$6.80</b><button class="add-btn">+ Add</button></div>
+            </div>
         </div>
+    </section>
 
-
-        <div>
-            ⭐⭐⭐⭐⭐
-            <p>"My favorite place to relax."</p>
+    <!-- STORY -->
+    <section class="story" id="about">
+        <div class="story-text reveal">
+            <span class="eyebrow">OUR STORY</span>
+            <h2>Rooted in Kyoto,<br>Grown in Tokyo</h2>
+            <p>Mori means forest in Japanese. We wanted to create a small forest in the middle of the city — a place where you can breathe, slow down, and savor the moment.</p>
+            <p>We directly import our matcha from a 4th-generation farm in Uji, stone-milled, shade-grown 21 days. No powders, no shortcuts.</p>
+            <div class="story-points">
+                <div><span>🍃</span><p><b>Direct from Uji</b> — ceremonial grade only</p></div>
+                <div><span>♻️</span><p><b>Zero waste</b> — compostable cups & recycling</p></div>
+                <div><span>👩‍🍳</span><p><b>Homemade</b> — syrups & desserts made daily</p></div>
+            </div>
         </div>
+        <div class="story-visual reveal">
+            <img src="images/story-bg.png" alt="Cafe interior">
+            <div class="story-card">
+                <h4>Visit our little forest</h4>
+                <p>Green Street 25, Tokyo • 09:00–21:00</p>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="section-head reveal">
+            <span class="eyebrow">WHY MORI?</span>
+            <h2>Crafted for calm</h2>
+        </div>
+        <div class="features-container">
+            <div class="feature-card reveal"><div class="feature-icon">🌱</div><h3>Organic & Pure</h3><p>Shade-grown 21 days, first harvest, no additives — just pure tea energy without jitters.</p></div>
+            <div class="feature-card reveal"><div class="feature-icon">☕</div><h3>Barista Craft</h3><p>Every bowl whisked with a chasen by hand. Oat, soy, coconut — you choose.</p></div>
+            <div class="feature-card reveal"><div class="feature-icon">🏡</div><h3>Cozy Space</h3><p>Light wood, linen, plants, and lo-fi. Work, read, or just be. Free fast Wi-Fi.</p></div>
+        </div>
+    </section>
 
-</section>
-   <footer>
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="section-head reveal">
+            <span class="eyebrow">LOVED</span>
+            <h2>Customer Reviews</h2>
+        </div>
+        <div class="review-box">
+            <div class="review-card reveal"><div class="stars">⭐⭐⭐⭐⭐</div><p>"The best matcha café! The strawberry matcha is unreal. Cozy and delicious."</p><div class="author"><b>Aiko T.</b><span> • Local guide</span></div></div>
+            <div class="review-card reveal"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Beautiful place and amazing drinks. I come here to work every morning."</p><div class="author"><b>Kenji M.</b><span> • Designer</span></div></div>
+            <div class="review-card reveal"><div class="stars">⭐⭐⭐⭐⭐</div><p>"My favorite place to relax. Hojicha latte is my ritual now."</p><div class="author"><b>Sarah L.</b><span> • Tourist</span></div></div>
+        </div>
+    </section>
 
-    <div class="footer-logo">
-        🍃 MORI MATCHA
-    </div>
+    <!-- BOOKING -->
+    <section class="booking" id="booking">
+        <div class="booking-wrap reveal">
+            <div class="booking-info">
+                <span class="eyebrow">RESERVE</span>
+                <h2>Book a Table</h2>
+                <p>Reserve your cozy corner. Perfect for dates, work, or matcha tasting with friends. We'll hold it for 15 min.</p>
+                <ul>
+                    <li>✓ Instant confirmation</li>
+                    <li>✓ Free cancellation</li>
+                    <li>✓ Pet-friendly terrace</li>
+                </ul>
+            </div>
+            <form id="booking-form">
+                <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required></div>
+                <div class="form-row"><input type="date" name="date" id="book-date" required><input type="time" name="time" required></div>
+                <select name="guests"><option>1 Guest</option><option selected>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option></select>
+                <textarea name="notes" placeholder="Special requests (optional)"></textarea>
+                <button type="submit" class="primary-btn">Reserve Now — Free</button>
+                <p class="form-hint">By booking you agree to our cozy house rules 🌿</p>
+            </form>
+        </div>
+    </section>
 
-    <p>Green Street 25, Tokyo</p>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo">🍃 MORI <span>MATCHA</span></div>
+            <p>Green Street 25, Tokyo — <br>Open Daily: 09:00 – 21:00</p>
+            <p>Email: hello@morimatcha.jp</p>
+            <div class="socials"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Map</a></div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copy">© 2026 Mori Matcha. Crafted with 🍃 in Tokyo. All Rights Reserved.</p>
+            <p class="made">Third project, but already tasty — keep building!</p>
+        </div>
+    </footer>
 
-    <p>Open Daily: 09:00 – 21:00</p>
-
-    <p>Email: morimatcha@email.com</p>
-
-    <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
-    </div>
-
-    <p class="copy">
-        © 2026 Mori Matcha. All Rights Reserved.
-    </p>
-
-<section class="booking">
-
-    <h2>Book a Table</h2>
-
-    <p>Reserve your cozy place and enjoy the perfect matcha experience.</p>
-
-    <form>
-
-        <input type="text" placeholder="Your Name">
-
-        <input type="email" placeholder="Your Email">
-
-        <input type="date">
-
-        <input type="time">
-
-        <select>
-            <option>1 Guest</option>
-            <option>2 Guests</option>
-            <option>3 Guests</option>
-            <option>4 Guests</option>
-            <option>5+ Guests</option>
-        </select>
-
-        <button type="submit">Reserve Now</button>
-
-    </form>
-
-</section>
-   </footer>
     <script src="script.js"></script>
-
-</section>
 </body>
 </html>
