@@ -161,15 +161,23 @@ a{text-decoration:none;color:inherit}
 .story-points div{display:flex;gap:12px;align-items:center;background:var(--bg);padding:14px 16px;border-radius:16px}
 .story-points span{font-size:22px}
 .story-visual{position:relative}
-.story-visual img{border-radius:var(--radius);box-shadow:var(--shadow-lg);width:100%;aspect-ratio:4/5;object-fit:cover}
-.story-card{position:absolute;bottom:-18px;left:-18px;background:white;padding:18px 20px;border-radius:18px;box-shadow:var(--shadow-lg)}
+.story-visual img{border-radius:var(--radius);box-shadow:var(--shadow-lg);width:100%;aspect-ratio:4/5;object-fit:cover;transform:rotate(-0.8deg)}
+.story-card{position:absolute;bottom:-18px;left:-18px;background:white;padding:18px 20px;border-radius:18px;box-shadow:var(--shadow-lg);transform:rotate(1.2deg);font-family:"Noto Serif JP",serif}
 .story-card h4{font-size:15px;margin-bottom:4px}
 .story-card p{font-size:12px;color:var(--muted)}
+
+.hand-note{padding:60px 6%;background:#f6f2eb;display:flex;justify-content:center}
+.note-wrap{display:flex;gap:30px;align-items:center;max-width:900px;flex-wrap:wrap;justify-content:center}
+.note-img{width:280px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.12);transform:rotate(-2deg);flex-shrink:0}
+.note-text h4{font-family:"Noto Serif JP",serif;font-size:26px;color:var(--green);margin-bottom:12px}
+.note-text p{font-style:italic;color:#555;line-height:1.8;font-size:16px;margin-bottom:16px}
+.note-signature{font-family:"Poppins",sans-serif;font-weight:600;color:var(--pink-dark);font-size:15px}
 
 /* FEATURES */
 .features{padding:90px 6%;text-align:center}
 .features-container{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
-.feature-card{background:white;width:320px;padding:32px 24px;border-radius:var(--radius);box-shadow:var(--shadow);transition:.35s;text-align:left}
+.feature-card{background:white;width:320px;padding:32px 24px;border-radius:var(--radius);box-shadow:var(--shadow);transition:.35s;text-align:left;position:relative}
+.feature-card:nth-child(1){transform:rotate(0.5deg)}
 .feature-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
 .feature-icon{width:56px;height:56px;background:var(--green-light);display:grid;place-items:center;border-radius:16px;font-size:28px;margin-bottom:18px}
 .feature-card h3{margin-bottom:10px}

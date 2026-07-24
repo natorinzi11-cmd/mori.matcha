@@ -240,4 +240,4 @@ if (heroWrap) {
   });
 }
 
-console.log('%c🍃 MORI MATCHA — Thanks for checking the console! Third project is fire.', 'color:#6c8d4d;font-size:14px;font-weight:600');
+console.log('%c🍃 Mori Matcha — made by hand, not by robot. If something breaks, tell me.', 'color:#6c8d4d;font-size:13px;font-weight:600');
