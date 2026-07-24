@@ -280,3 +280,13 @@ footer{background:var(--green);color:white;padding:56px 6% 30px}
   .float-2{left:0}
   .footer-bottom{flex-direction:column;text-align:center}
 }
+
+/* FINISHING DETAILS */
+::selection{background:var(--pink-light);color:var(--green-dark)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(108,141,77,.35);outline-offset:3px}
+.hero-img-wrap{isolation:isolate}
+.hero-circle{pointer-events:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
