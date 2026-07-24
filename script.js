@@ -240,4 +240,4 @@ if (heroWrap) {
   });
 }
 
-console.log('%c🍃 MORI MATCHA — Thanks for checking the console! Third project is fire.', 'color:#6c8d4d;font-size:14px;font-weight:600');
+// Mori Matcha interactions loaded
