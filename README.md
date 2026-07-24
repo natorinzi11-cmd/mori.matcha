@@ -47,10 +47,10 @@
 ```bash
 git add .
 git commit -m "feat: Mori Matcha v2 - cart, filters, booking, responsive"
-git push origin arena/019f9326-mori-matcha
+git push origin arena/019f9344-mori-matcha
 ```
 
-Затем в настройках репо → Pages → Branch: `arena/019f9326-mori-matcha` / root.
+Затем в настройках репо → Pages → Branch: `arena/019f9344-mori-matcha` / root.
 
 ### 📸 Структура
 ```
